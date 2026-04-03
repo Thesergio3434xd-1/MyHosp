@@ -1,6 +1,12 @@
 # MyHosp 🏥
 
-> Plataforma web de gestión hospitalaria centrada en la experiencia del usuario, accesibilidad para adultos mayores y optimización del agendamiento médico.
+<p align="center">
+	<img src="public/img/logo.png" alt="Logo MyHosp" width="180">
+</p>
+
+<p align="center">
+	<b>Plataforma web de gestión hospitalaria centrada en la experiencia del usuario, accesibilidad para adultos mayores y optimización del agendamiento médico.</b>
+</p>
 
 ![Node](https://img.shields.io/badge/Node.js-14%2B-3C873A?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-4.21-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -33,8 +39,10 @@
 11. [Reflexión final](#-reflexion-final)
 12. [Vista previa e imágenes](#-vista-previa-e-imagenes)
 13. [Estructura técnica del repositorio](#-estructura-tecnica-del-repositorio)
-14. [Inicio rápido](#-inicio-rapido)
-15. [Bibliografía](#-bibliografia)
+14. [Cómo abrir y usar el proyecto](#-cómo-abrir-y-usar-el-proyecto)
+15. [Inicio rápido](#-inicio-rápido)
+16. [Bibliografía](#-bibliografía)
+17. [Licencia y uso](#-licencia-y-uso)
 
 ---
 
@@ -81,17 +89,19 @@ MyHosp nace para reducir fricción en procesos críticos del sistema de salud:
 
 ### Personas / arquetipos
 
-#### 1) Claudia Piraban
+> Para mantener confidencialidad, los perfiles de usuario se documentan de forma anónima.
+
+#### 1) Persona A - paciente adulto
 
 - Objetivo: navegar entre secciones y completar login/registro con claridad.
 - Frustraciones: instrucciones poco visibles para activar el asistente virtual.
 
-#### 2) Ana Isabel Martínez (tercera edad)
+#### 2) Persona B - adulta mayor
 
 - Objetivo: iniciar sesión y consultar perfil sin apoyo externo.
 - Frustraciones: tipografía pequeña y baja claridad visual en formularios.
 
-#### 3) Luis Hernando Reyes
+#### 3) Persona C - usuario frecuente
 
 - Objetivo: acceso veloz a perfil, dashboard e historial clínico.
 - Frustraciones: navegación poco intuitiva y sobrecarga visual en algunos módulos.
@@ -244,10 +254,20 @@ MyHosp confirma que una solución funcional no siempre es intuitiva hasta valida
 
 ### Recursos visuales de referencia
 
+<p align="center">
+	<img src="public/img/logo.png" alt="Logo MyHosp" width="260">
+</p>
+
 | Vista | Imagen |
 |---|---|
 | Atención médica | ![Doctor](public/img/DOCTOR.png) |
 | Gestión documental | ![Documento](public/img/documento.png) |
+
+### Vista previa rápida
+
+- El logo se muestra primero para reforzar identidad visual.
+- Las imágenes restantes funcionan como apoyo de estilo y documentación.
+- Si luego compartes más capturas, puedo integrarlas en una galería más completa.
 
 ### Nota sobre imágenes
 
@@ -269,6 +289,48 @@ Myhosp/
 |-- server.js
 |-- package.json
 ```
+
+---
+
+## 🛠️ Cómo abrir y usar el proyecto
+
+### Requisitos previos
+
+- Node.js 14 o superior.
+- npm instalado.
+- Visual Studio Code o cualquier editor compatible.
+
+### Abrir el proyecto en VS Code
+
+1. Abre la carpeta raíz del proyecto `MyHosp`.
+2. Verifica que existan `server.js`, `package.json` y la carpeta `public/`.
+3. Abre una terminal integrada en la raíz del proyecto.
+
+### Cómo usarlo
+
+1. Instala dependencias con `npm install`.
+2. Ejecuta el servidor con `npm run dev` para desarrollo o `npm start` para ejecución normal.
+3. Abre `http://localhost:3000` en el navegador.
+4. Navega por el landing, login, registro, dashboard y módulos de citas, perfil, historial y ayuda.
+5. Si el asistente de voz está habilitado en el frontend, usa los comandos indicados por la interfaz para probar la navegación.
+
+### Flujo recomendado de prueba
+
+- Ingreso al sistema.
+- Registro o autenticación.
+- Exploración del dashboard.
+- Agendamiento de una cita.
+- Consulta de historial médico.
+- Revisión de ayuda y soporte.
+
+### Estructura de uso para mantenimiento
+
+- `server.js`: punto de entrada del backend.
+- `server/services/`: lógica de servicios.
+- `public/html`: pantallas del sistema.
+- `public/css`: estilos por módulo.
+- `public/js`: scripts y lógica del cliente.
+- `public/img`: recursos visuales.
 
 ---
 
@@ -300,6 +362,26 @@ Servidor local por defecto: `http://localhost:3000`.
 
 - `npm start`: inicia el servidor con Node.
 - `npm run dev`: inicia el servidor con Nodemon.
+
+---
+
+## 📦 Despliegue y notas técnicas
+
+- El servidor principal se inicia desde `server.js`.
+- Express expone archivos estáticos desde `public/`.
+- Socket.IO se usa para eventos en tiempo real.
+- Los archivos HTML están organizados para conservar compatibilidad con las rutas actuales.
+- Si en el futuro se reorganizan carpetas, deben actualizarse todos los enlaces internos y rutas de recursos.
+
+---
+
+## 📜 Licencia y uso
+
+Este proyecto se mantiene como desarrollo académico y demostrativo.
+
+- Si el repositorio se usa solo para fines internos o educativos, puede mantenerse sin licencia pública definida.
+- Si deseas publicarlo o distribuirlo formalmente, puedo agregarte una licencia MIT, Apache 2.0 o una licencia académica personalizada.
+- Los recursos gráficos deben revisarse antes de su publicación externa para confirmar permisos y atribuciones.
 
 ---
 
