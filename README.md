@@ -12,8 +12,29 @@
 ![Express](https://img.shields.io/badge/Express-4.21-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8-010101?style=for-the-badge&logo=socket.io&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
+
+## ✨ Resumen ejecutivo
+
+MyHosp es una plataforma web pensada para mejorar la experiencia de pacientes y personal de salud mediante una interfaz clara, una navegación por módulos y un asistente de voz orientado a accesibilidad. El proyecto prioriza:
+
+- Reducción de fricción al agendar citas.
+- Claridad visual para usuarios mayores.
+- Organización de información clínica y de perfil.
+- Interacción en tiempo real con Socket.IO.
+
+---
+
+## 🚀 Características destacadas
+
+- Navegación multipágina con rutas directas y estructura simple.
+- Flujo de autenticación con login y registro.
+- Módulos de citas, perfil, historial médico, consultas online y ayuda.
+- Asistente virtual por voz para orientar la navegación.
+- Estilos distribuidos por módulo para facilitar mantenimiento.
+- Documentación orientada a uso académico y despliegue local.
 
 ## 👥 Creadores
 
@@ -139,6 +160,14 @@ El User Journey Map permitió identificar:
 4. Como ciudadano afectado por retrasos, quiero agendar citas en línea desde cualquier lugar para evitar barreras de acceso.
 5. Como paciente con consultas previas, quiero visualizar y descargar historial médico para gestionar mi información de salud.
 
+### Historias de usuario priorizadas
+
+- Acceso rápido al dashboard después de autenticarse.
+- Programación de citas con pocos pasos.
+- Lectura clara para usuarios con baja visión.
+- Consulta de historial clínico sin saturación visual.
+- Ayuda guiada en cualquier sección de la plataforma.
+
 ---
 
 ## 🏗️ Arquitectura de la información
@@ -172,6 +201,10 @@ Se adoptó un modelo **lineal con jerarquía**, orientado a:
 - Facilitar la curva de aprendizaje.
 - Guiar de forma práctica al usuario en tareas prioritarias.
 
+### Flujo principal sugerido
+
+Landing → Login / Registro → Dashboard → Citas / Perfil / Historial / Consultas / Ayuda
+
 ---
 
 ## 🎨 Diseño de interfaces
@@ -200,6 +233,13 @@ El prototipo web se implementó con **HTML, CSS, Bootstrap y Node.js**, incluyen
 - Consistencia visual para reducir confusión.
 - Enfoque especial en usuarios mayores y personas con limitaciones visuales.
 
+### Principios visuales aplicados
+
+- Jerarquía tipográfica clara.
+- Contraste suficiente entre texto y fondo.
+- Espaciado generoso para evitar errores táctiles.
+- Elementos consistentes en todo el sistema.
+
 ---
 
 ## 🧪 Pruebas de usabilidad
@@ -213,6 +253,12 @@ Pruebas moderadas con usuarios representativos, observación directa, medición 
 - Dificultades iniciales en activación/uso del asistente virtual.
 - Problemas de legibilidad en campos de formulario.
 - Errores de navegación por botones o enlaces inactivos.
+
+### Métricas objetivo del proyecto
+
+- Tiempo de agendamiento estimado: 2-3 minutos.
+- Aceptación deseada por usuarios: 75% o más.
+- Satisfacción y usabilidad objetivo: 80%.
 
 ### Mejoras implementadas
 
@@ -237,6 +283,12 @@ Pruebas moderadas con usuarios representativos, observación directa, medición 
 - Mayor visibilidad de etiquetas y campos de entrada.
 - Reestructuración de navegación para disminuir confusión.
 - Optimización visual y funcional del asistente virtual.
+
+### Lecciones de diseño
+
+- Menos saturación visual mejora la comprensión.
+- Las señales de estado del asistente son críticas.
+- Un dashboard limpio reduce el tiempo de aprendizaje.
 
 ---
 
@@ -268,6 +320,14 @@ MyHosp confirma que una solución funcional no siempre es intuitiva hasta valida
 - El logo se muestra primero para reforzar identidad visual.
 - Las imágenes restantes funcionan como apoyo de estilo y documentación.
 - Si luego compartes más capturas, puedo integrarlas en una galería más completa.
+
+### Galería de referencia
+
+| Elemento | Uso |
+|---|---|
+| Logo | Identidad principal del proyecto |
+| DOCTOR | Imagen de apoyo para contexto de salud |
+| documento | Imagen de apoyo para documentación o historial |
 
 ### Nota sobre imágenes
 
@@ -305,6 +365,7 @@ Myhosp/
 1. Abre la carpeta raíz del proyecto `MyHosp`.
 2. Verifica que existan `server.js`, `package.json` y la carpeta `public/`.
 3. Abre una terminal integrada en la raíz del proyecto.
+4. Si quieres ver el backend, abre `server.js` y si quieres revisar la interfaz, entra a `public/`.
 
 ### Cómo usarlo
 
@@ -327,10 +388,10 @@ Myhosp/
 
 - `server.js`: punto de entrada del backend.
 - `server/services/`: lógica de servicios.
-- `public/html`: pantallas del sistema.
-- `public/css`: estilos por módulo.
-- `public/js`: scripts y lógica del cliente.
-- `public/img`: recursos visuales.
+- `public/`: pantallas del sistema.
+- `public/css/`: estilos por módulo.
+- `public/js/`: scripts y lógica del cliente.
+- `public/img/`: recursos visuales.
 
 ---
 
@@ -373,15 +434,24 @@ Servidor local por defecto: `http://localhost:3000`.
 - Los archivos HTML están organizados para conservar compatibilidad con las rutas actuales.
 - Si en el futuro se reorganizan carpetas, deben actualizarse todos los enlaces internos y rutas de recursos.
 
+### Recomendación de despliegue
+
+Si más adelante publicas MyHosp en producción, conviene:
+
+- Configurar variables de entorno para puerto y credenciales.
+- Revisar rendimiento de imágenes y minificar recursos.
+- Validar rutas y navegación antes del despliegue final.
+- Mantener una copia de respaldo de las imágenes y estilos.
+
 ---
 
 ## 📜 Licencia y uso
 
-Este proyecto se mantiene como desarrollo académico y demostrativo.
+Este proyecto se distribuye bajo licencia MIT para facilitar su uso, modificación y adaptación en contextos académicos o de desarrollo.
 
-- Si el repositorio se usa solo para fines internos o educativos, puede mantenerse sin licencia pública definida.
-- Si deseas publicarlo o distribuirlo formalmente, puedo agregarte una licencia MIT, Apache 2.0 o una licencia académica personalizada.
+- Puedes reutilizar, modificar y redistribuir el código con la atribución correspondiente.
 - Los recursos gráficos deben revisarse antes de su publicación externa para confirmar permisos y atribuciones.
+- Si quieres cambiar la licencia por una académica o institucional, también se puede ajustar.
 
 ---
 
